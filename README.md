@@ -1,2 +1,2 @@
 # router service
-сервис роутер
+сервис роутер с rest teams клиентом
