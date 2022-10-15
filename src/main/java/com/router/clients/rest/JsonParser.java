@@ -32,10 +32,10 @@ public class JsonParser {
     }
 
     public List<TimeRecord> getListOfTimeRecordsFromJson(String response) {
-        return new Gson().fromJson(response, timeRecordListType);
+        return gson.fromJson(response, timeRecordListType);
     }
 
     public List<UserRecord> getListOfUserRecordsFromJson(String response) {
-        return new Gson().fromJson(response, userRecordListType);
+        return gson.fromJson(response, userRecordListType);
     }
 }
