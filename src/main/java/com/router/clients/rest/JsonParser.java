@@ -11,12 +11,12 @@ import java.util.List;
 
 public class JsonParser {
     Gson gson;
-    Type TimeRecordListType;
-    Type UserRecordListType;
+    Type timeRecordListType;
+    Type userRecordListType;
 
     public JsonParser() {
-        TimeRecordListType = new TypeToken<ArrayList<TimeRecord>>(){}.getType();
-        UserRecordListType = new TypeToken<ArrayList<UserRecord>>(){}.getType();
+        timeRecordListType = new TypeToken<ArrayList<TimeRecord>>(){}.getType();
+        userRecordListType = new TypeToken<ArrayList<UserRecord>>(){}.getType();
 
         gson = new GsonBuilder()
         .setDateFormat("yyyy-MM-dd")
@@ -32,10 +32,10 @@ public class JsonParser {
     }
 
     public List<TimeRecord> getListOfTimeRecordsFromJson(String response) {
-        return new Gson().fromJson(response, TimeRecordListType);
+        return new Gson().fromJson(response, timeRecordListType);
     }
 
     public List<UserRecord> getListOfUserRecordsFromJson(String response) {
-        return new Gson().fromJson(response, UserRecordListType);
+        return new Gson().fromJson(response, userRecordListType);
     }
 }
