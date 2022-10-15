@@ -1,4 +1,4 @@
-package com.router.clients.accountant;
+package com.router.clients.rest;
 
 import static com.router.tools.PropertyReader.PROPERTIES;
 

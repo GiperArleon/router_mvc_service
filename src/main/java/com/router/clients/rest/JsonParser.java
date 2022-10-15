@@ -1,4 +1,4 @@
-package com.router.clients.accountant;
+package com.router.clients.rest;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

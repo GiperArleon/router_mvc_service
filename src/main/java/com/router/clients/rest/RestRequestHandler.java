@@ -1,4 +1,4 @@
-package com.router.clients.accountant;
+package com.router.clients.rest;
 
 import com.router.clients.model.TimeRecord;
 import com.router.clients.model.UserRecord;
@@ -9,7 +9,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.ArrayList;
 import java.util.List;
-import static com.router.clients.accountant.RestRequestUrls.*;
+import static com.router.clients.rest.RestRequestUrls.*;
 
 @Slf4j
 public class RestRequestHandler {
@@ -33,9 +33,9 @@ public class RestRequestHandler {
             response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
             if(response.statusCode() == 200) {
-                log.debug("got response code {} body {}", response.statusCode(), response.body());
+                log.info("got response code {} body {}", response.statusCode(), response.body());
                 result = jsonParser.getListOfTimeRecordsFromJson(response.body());
-                log.debug("parsing result: {}", result);
+                log.info("parsing result: {}", result);
             } else {
                 log.error("wrong response code = {}", response.statusCode());
             }
@@ -52,6 +52,8 @@ public class RestRequestHandler {
             log.debug("send post rest request {} body {}", POST_TIME_RECORD_URL, jsonUser);
             HttpRequest request = HttpRequest.newBuilder()
                     .uri(URI.create(POST_TIME_RECORD_URL))
+                    .header("Content-Type", "application/json")
+                    .header("Accept", "application/json")
                     .POST(HttpRequest.BodyPublishers.ofString(jsonUser))
                     .build();
             response = client.send(request, HttpResponse.BodyHandlers.ofString());
@@ -131,6 +133,8 @@ public class RestRequestHandler {
             log.debug("send post rest request {} body {}", POST_USER_RECORD, jsonUser);
             HttpRequest request = HttpRequest.newBuilder()
                     .uri(URI.create(POST_USER_RECORD))
+                    .header("Content-Type", "application/json")
+                    .header("Accept", "application/json")
                     .POST(HttpRequest.BodyPublishers.ofString(jsonUser))
                     .build();
             response = client.send(request, HttpResponse.BodyHandlers.ofString());

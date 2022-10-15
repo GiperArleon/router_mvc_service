@@ -9,7 +9,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.Duration;
 
-import static com.router.clients.accountant.RestRequestUrls.POST_TELEGRAM_URL;
+import static com.router.clients.rest.RestRequestUrls.POST_TELEGRAM_URL;
 import static com.router.tools.PropertyReader.PROPERTIES;
 
 @Slf4j

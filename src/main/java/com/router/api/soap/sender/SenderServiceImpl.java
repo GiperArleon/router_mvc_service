@@ -10,7 +10,7 @@ import com.router.clients.model.TimeRecord;
 import com.router.clients.model.UserRecord;
 import com.router.clients.teams.RestUserClient;
 import com.router.clients.teams.RestUserClientFactory;
-import com.router.clients.teams.UserRoles;
+import com.router.clients.model.UserRoles;
 import com.router.pdf.PdfManager;
 import lombok.extern.slf4j.Slf4j;
 import org.telegram.telegrambots.meta.api.methods.send.SendDocument;

@@ -8,7 +8,7 @@ import com.router.clients.model.UserRecord;
 import com.router.clients.teams.RestUserClient;
 import com.router.clients.teams.RestUserClientFactory;
 import com.router.clients.model.TimeRecord;
-import com.router.clients.teams.UserRoles;
+import com.router.clients.model.UserRoles;
 import lombok.extern.slf4j.Slf4j;
 import javax.jws.WebService;
 import java.util.ArrayList;

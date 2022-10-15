@@ -3,7 +3,7 @@ package com.router.api.telegram.bot.commands.admin;
 import com.router.api.telegram.bot.commands.OperationCommand;
 import com.router.clients.model.UserRecord;
 import com.router.clients.notif.SoapNotificatorClientFactory;
-import com.router.clients.teams.UserRoles;
+import com.router.clients.model.UserRoles;
 import com.router.tools.Utils;
 import lombok.extern.slf4j.Slf4j;
 import org.telegram.telegrambots.meta.api.objects.Chat;

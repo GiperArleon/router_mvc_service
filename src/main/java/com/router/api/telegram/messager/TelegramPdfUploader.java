@@ -1,6 +1,6 @@
 package com.router.api.telegram.messager;
 
-import com.router.clients.accountant.RestRequestUrls;
+import com.router.clients.rest.RestRequestUrls;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.http.HttpEntity;

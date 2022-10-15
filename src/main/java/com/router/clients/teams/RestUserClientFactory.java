@@ -1,6 +1,6 @@
 package com.router.clients.teams;
 
-import com.router.clients.accountant.RestRequestHandler;
+import com.router.clients.rest.RestRequestHandler;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j

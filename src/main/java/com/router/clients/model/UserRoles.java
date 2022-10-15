@@ -1,4 +1,4 @@
-package com.router.clients.teams;
+package com.router.clients.model;
 
 public enum UserRoles {
     USER, ADMIN, LEAD, LECTOR
